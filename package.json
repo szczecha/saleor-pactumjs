@@ -1,0 +1,23 @@
+{
+  "name": "saleor-pactumjs",
+  "version": "1.0.0",
+  "description": "PoC for using PactumJS as API adutomation tool for Saleor Core",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szczecha/saleor-pactumjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szczecha/saleor-pactumjs/issues"
+  },
+  "homepage": "https://github.com/szczecha/saleor-pactumjs#readme",
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "pactum": "^3.1.8"
+  }
+}
