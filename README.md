@@ -5,6 +5,6 @@ https://pactumjs.github.io/introduction/quick-start.html#system-requirements
 
 running tests:
 
-npm run test fileName.js
+`npm run test fileName.js`
 
 
