@@ -24,5 +24,10 @@
     "pactum": "^3.1.8",
     "supertest": "^6.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chai": "^4.3.6",
+    "cucumber-html-reporter": "^5.5.0",
+    "jest-html-reporter": "^3.5.0",
+    "mocha-simple-html-reporter": "^2.0.0"
+  }
 }

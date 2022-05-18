@@ -1,7 +1,7 @@
 const { spec, request } = require('pactum');
 const { like } = require('pactum-matchers');
 
-request.setBaseUrl('http://localhost:8000/graphql');
+request.setBaseUrl('https://qa.staging.saleor.cloud/graphql');
 
 describe('Basic Checkout', () => {
 
@@ -153,6 +153,7 @@ describe('Basic Checkout', () => {
     it('should complete checkout', async () => {
     await spec()
     .post('/')
+    .withRequestTimeout(10000)
     .withGraphQLQuery(`mutation completeCheckout($checkoutId: ID!) {
         checkoutComplete(checkoutId: $checkoutId) {
         errors {

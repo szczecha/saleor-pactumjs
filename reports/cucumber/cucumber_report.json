@@ -1,0 +1,163 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "checkout-test;simple-checkout-test",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Simple checkout test",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 225764
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is creating checkout with default address and sample product",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 941224
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "response should contain available shipping methods",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 795365036
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "he is assigning shipping method",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143725
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "response should have status code 200",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 287325154
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "correct total price",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 221976
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "he is creating dummy payment",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:149"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134039
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "response should have status code 200",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 384505295
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "he completes checkout",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:175"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191906
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "response should have status code 200",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 463685223
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "fully charged payment status",
+            "match": {
+              "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:200"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 257971098.99999997,
+              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 400 !== 200\n    + expected - actual\n\n    -400\n    +200\n\n    at Expect._validateStatus (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/expect.js:103:14)\n    at Expect.validate (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/Tosser.js:225:23)\n    at Tosser.validate (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/Tosser.js:192:18)\n    at Tosser.toss (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/Tosser.js:42:18)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async World.<anonymous> (/Users/karolinarakoczy/saleor-pactumjs/pactumAndmocha/cucumberjs/checkoutSpecs.js:201:16)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "checkout-test",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Checkout test",
+    "tags": [],
+    "uri": "pactumAndmocha/cucumberjs/checkout.feature"
+  }
+]

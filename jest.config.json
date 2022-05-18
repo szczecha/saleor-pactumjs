@@ -1,0 +1,15 @@
+{
+  "reporters": [
+    "default",
+    [
+      "./node_modules/jest-html-reporter",
+      {
+        "pageTitle": "Jest test report",
+        "customScriptPath": true,
+        "includeFailureMsg": true,
+        "includeObsoleteSnapshots": true,
+        "outputPath": "reports/jest-report.html"
+      }
+    ]
+  ]
+}

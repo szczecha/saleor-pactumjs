@@ -1,9 +1,11 @@
 
 const pactum = require('pactum');
+var chai = require('chai'); 
+var expect = chai.expect;
 const { like } = require('pactum-matchers');
 const { Given, When, Then, Before } = require('@cucumber/cucumber');
 
-pactum.request.setBaseUrl('https://qa.staging.saleor.cloud/graphql/');
+pactum.request.setBaseUrl('https://qa.staging.saleor.cloud/graphql');
 
 let spec = pactum.spec();
 
@@ -12,7 +14,7 @@ Before(() => {
 });
 
 Given('user is creating checkout with default address and sample product', async () => {
-  await spec
+  spec
     .post("/")
     .withGraphQLQuery(`mutation CreateCheckout($checkoutInput: CheckoutCreateInput!) {
         checkoutCreate(input: $checkoutInput) {
@@ -54,7 +56,7 @@ Given('user is creating checkout with default address and sample product', async
           "email": "b@v.pl",
           "lines": [
             {
-              "quantity": 5,
+              "quantity": 5000,
               "variantId": "UHJvZHVjdFZhcmlhbnQ6MjQ4"
             }
           ],
@@ -87,14 +89,17 @@ Given('user is creating checkout with default address and sample product', async
 
 Then('response should contain available shipping methods', async () => {
   await spec
-  .expectStatus(200)
-  .stores('checkoutToken', 'data.checkoutCreate.checkout.token')
-  .stores('checkoutId', 'data.checkoutCreate.checkout.id')
-  .stores('shippingMethod', 'data.checkoutCreate.checkout.shippingMethods[0].id');
+    .toss();
+  spec
+    .expectStatus(200)
+    .stores('checkoutToken', 'data.checkoutCreate.checkout.token')
+    .stores('checkoutId', 'data.checkoutCreate.checkout.id')
+    .stores('shippingMethod', 'data.checkoutCreate.checkout.shippingMethods[0].id');
+
 })
 
 When('he is assigning shipping method', () => {
-  spec = pactum.spec()
+  spec = pactum.spec();
   spec["post"]('/')
     .withGraphQLQuery(`mutation UpdateCheckoutShippingMethod(
       $checkoutId: ID!
@@ -132,7 +137,8 @@ When('he is assigning shipping method', () => {
     )
 })
 
-Then('response should have status code 200', () => {
+Then('response should have status code 200', async () => {
+  await spec.toss();
   spec.expectStatus(200);
 })
 
@@ -191,6 +197,8 @@ When('he completes checkout', () => {
     )
 })
 
-Then('fully charged payment status', () => {
-  spec.expectJsonMatch('data.checkoutComplete.order.paymentStatus', like('FULLY_CHARGED'));
+Then('fully charged payment status', async () => {
+  const resp = await spec.toss();
+  const respObj = JSON.parse(resp.text);
+  expect(respObj.data.checkoutComplete.order.paymentStatus).to.equal("FULLY_CHARGED")
 })

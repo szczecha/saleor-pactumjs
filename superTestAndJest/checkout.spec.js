@@ -5,7 +5,7 @@ const requestR = require('supertest')("https://master.staging.saleor.cloud/graph
 describe('Basic Checkout', () => {
 
   it('should complete basic checkout', async () => {
-    jest.setTimeout(10000)
+    jest.setTimeout(100)
 
     const checkoutResp = await request.post("")
       .send({
