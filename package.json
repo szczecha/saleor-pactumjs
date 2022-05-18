@@ -4,8 +4,10 @@
   "description": "PoC for using PactumJS as API adutomation tool for Saleor Core",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "test-cucumber": "npx cucumber-js ./cucumberjs/"
+    "test-pactum": "npx mocha pactumAndmocha/checkout.js",
+    "test-pactum-cucumber": "npx cucumber-js pactumAndmocha/cucumberjs -f json:reports/cucumber/cucumber_report.json",
+    "test-supertest-jest": "npx jest superTestAndJest/checkout.spec.js",
+    "cucumber-report": "node index.js"
   },
   "repository": {
     "type": "git",
