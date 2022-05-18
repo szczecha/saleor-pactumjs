@@ -3,7 +3,7 @@ const pactum = require('pactum');
 const { like } = require('pactum-matchers');
 const { Given, When, Then, Before } = require('@cucumber/cucumber');
 
-pactum.request.setBaseUrl('https://qa.staging.saleor.cloud/graphql');
+pactum.request.setBaseUrl('https://qa.staging.saleor.cloud/graphql/');
 
 let spec = pactum.spec();
 
