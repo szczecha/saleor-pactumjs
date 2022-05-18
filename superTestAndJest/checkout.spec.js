@@ -7,7 +7,7 @@ describe('Basic Checkout', () => {
   it('should complete basic checkout', async () => {
     let checkout;
 
-    const response = request.post("")
+    const response = await request.post("")
       .send({
         query: `mutation CreateCheckout($checkoutInput: CheckoutCreateInput!) {
           checkoutCreate(input: $checkoutInput) {
@@ -75,10 +75,9 @@ describe('Basic Checkout', () => {
           }
         }
       })
-      .expect(200)
-      .end((err, res) => {
-        if (err) return document(err)
-        checkout = res.body.data.checkoutCreate.checkout;
+      .expect((res) => {
+        console.log(res.body.data);
       })
+      .expect(200)
   });
 })
