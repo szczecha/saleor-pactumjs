@@ -2,7 +2,6 @@
   "name": "saleor-pactumjs",
   "version": "1.0.0",
   "description": "PoC for using PactumJS as API adutomation tool for Saleor Core",
-  "main": "index.js",
   "scripts": {
     "test-pactum": "npx mocha pactumAndmocha/checkout.js",
     "test-pactum-cucumber": "npx cucumber-js pactumAndmocha/cucumberjs -f json:reports/cucumber/cucumber_report.json",

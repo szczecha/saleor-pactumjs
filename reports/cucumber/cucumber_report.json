@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 225764
+              "duration": 224514
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 941224
+              "duration": 939329
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 795365036
+              "duration": 4921727544
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 143725
+              "duration": 143355
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 287325154
+              "duration": 827713063
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 221976
+              "duration": 351222
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 134039
+              "duration": 242118
             }
           },
           {
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 384505295
+              "duration": 670082259
             }
           },
           {
@@ -118,7 +118,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 191906
+              "duration": 135866
             }
           },
           {
@@ -131,7 +131,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 463685223
+              "duration": 928834493
             }
           },
           {
@@ -143,9 +143,8 @@
               "location": "pactumAndmocha/cucumberjs/checkoutSpecs.js:200"
             },
             "result": {
-              "status": "failed",
-              "duration": 257971098.99999997,
-              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 400 !== 200\n    + expected - actual\n\n    -400\n    +200\n\n    at Expect._validateStatus (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/expect.js:103:14)\n    at Expect.validate (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/Tosser.js:225:23)\n    at Tosser.validate (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/Tosser.js:192:18)\n    at Tosser.toss (/Users/karolinarakoczy/saleor-pactumjs/node_modules/pactum/src/models/Tosser.js:42:18)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async World.<anonymous> (/Users/karolinarakoczy/saleor-pactumjs/pactumAndmocha/cucumberjs/checkoutSpecs.js:201:16)"
+              "status": "passed",
+              "duration": 299948192
             }
           }
         ],

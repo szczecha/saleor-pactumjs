@@ -6,6 +6,7 @@ request.setBaseUrl('https://qa.staging.saleor.cloud/graphql');
 describe('Basic Checkout', () => {
 
     it('should create checkout', async () => {
+
     await spec()
     .post('/')
     .withGraphQLQuery(`mutation CreateCheckout($checkoutInput: CheckoutCreateInput!) {

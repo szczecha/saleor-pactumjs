@@ -11,5 +11,23 @@
         "outputPath": "reports/jest-report.html"
       }
     ]
-  ]
+  ],
+  "bail": 1,
+  "verbose": true,
+  "roots": [
+    "superTestAndJest"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/jspm_packages"
+  ],
+  "unmockedModulePathPatterns": [
+    "./node_modules/react"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js"
+  ],
+  "testEnvironment": "node"
 }

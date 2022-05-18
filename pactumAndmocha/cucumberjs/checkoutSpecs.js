@@ -56,7 +56,7 @@ Given('user is creating checkout with default address and sample product', async
           "email": "b@v.pl",
           "lines": [
             {
-              "quantity": 5000,
+              "quantity": 5,
               "variantId": "UHJvZHVjdFZhcmlhbnQ6MjQ4"
             }
           ],
