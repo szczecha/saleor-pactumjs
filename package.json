@@ -2,9 +2,12 @@
   "name": "saleor-pactumjs",
   "version": "1.0.0",
   "description": "PoC for using PactumJS as API adutomation tool for Saleor Core",
-  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test-pactum": "npx mocha pactumAndmocha/checkout.js",
+    "test-pactum-cucumber": "npx cucumber-js pactumAndmocha/cucumberjs -f json:reports/cucumber/cucumber_report.json",
+    "test-supertest-jest": "npx jest superTestAndJest/checkout.spec.js",
+    "cucumber-report": "node index.js",
+    "vitest": "npx vitest superTestAndVitest/checkout.spec.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,17 @@
   },
   "homepage": "https://github.com/szczecha/saleor-pactumjs#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^8.2.1",
+    "jest": "^28.1.0",
     "mocha": "^10.0.0",
-    "pactum": "^3.1.8"
+    "pactum": "^3.1.8",
+    "supertest": "^6.2.3",
+    "vitest": "^0.12.9"
+  },
+  "dependencies": {
+    "chai": "^4.3.6",
+    "cucumber-html-reporter": "^5.5.0",
+    "jest-html-reporter": "^3.5.0",
+    "mocha-simple-html-reporter": "^2.0.0"
   }
 }

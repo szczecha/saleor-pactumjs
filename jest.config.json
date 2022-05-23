@@ -1,0 +1,33 @@
+{
+  "reporters": [
+    "default",
+    [
+      "./node_modules/jest-html-reporter",
+      {
+        "pageTitle": "Jest test report",
+        "customScriptPath": true,
+        "includeFailureMsg": true,
+        "includeObsoleteSnapshots": true,
+        "outputPath": "reports/jest-report.html"
+      }
+    ]
+  ],
+  "bail": 1,
+  "verbose": true,
+  "roots": [
+    "superTestAndJest"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/jspm_packages"
+  ],
+  "unmockedModulePathPatterns": [
+    "./node_modules/react"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js"
+  ],
+  "testEnvironment": "node"
+}
