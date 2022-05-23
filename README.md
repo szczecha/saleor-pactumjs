@@ -8,6 +8,7 @@ running tests:
 `npm run test-pactum`
 `npm run test-pactum-cucumber`
 `npm run test-supertest-jest`
+`npm run vitest`
 
 Generate report for cucumber:
 
